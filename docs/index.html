@@ -8,9 +8,9 @@
 
   <link rel="stylesheet" href="/css/style.css">
 
-  <script defer src="/js/index.js"></script>
   <!-- Swiper JS -->
   <script defer src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script defer src="/js/index.js"></script>
 
 </head>
 <body>
@@ -113,19 +113,32 @@
     <!-- 메인 -->
     <main>
       <!-- 메인 배너 슬라이드 -->
-      <article class="swiper main-banner">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="/img/main-banner01-pc.jpg" alt="">
+      <article class="main-banner-wrapper">
+        <div class="swiper main-banner">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="/img/main-banner01-pc.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="/img/main-banner02-pc.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="/img/main-banner03-pc.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="/img/main-banner04-pc.jpg" alt="">
+            </div>
           </div>
-          <div class="swiper-slide">
-            <img src="/img/main-banner02-pc.jpg" alt="">
+          <button class="swiper-button-next">
+          </button>
+          <button class="swiper-button-prev"></button>
+          <!-- 페이지네이션 -->
+          <div class="swiper-pagination">
           </div>
-
+          <span class="material-symbols-outlined">
+            pause
+          </span> 
         </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
       </article>
 
       <!-- 첫 번째 영역 / 공식몰에서만 -->
