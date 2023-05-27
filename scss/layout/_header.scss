@@ -1,0 +1,190 @@
+header {
+  width: 100%;
+  position: sticky;
+  top:0;
+}
+
+// 헤더 광고
+.header-ad {
+  width: 100%;
+  background-color: $color-blue;
+  p {
+    font-size: 1.3rem;
+    color: $color-white;
+    padding: 6px 0;
+    text-align: center;
+  }
+}
+
+.header-container {
+  width: 100%;
+  margin: 0 auto;
+  background-color: $color-white;
+
+  // 헤더 위 영역
+  .header-top {
+    width: 100%;
+    border-bottom: 1px solid #e9ebee;
+
+    &-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: flex-end;
+
+      .header-top-items {
+        height: 50px;
+        display: flex;
+        align-items: center;
+
+        .header-top-item {
+          padding-left: 35px;
+          position: relative;
+          a {
+            display: block;
+            font-size: 1.3rem;
+            color: $color-grey;
+          }
+
+          // 고객센터 왼쪽 선
+          &:last-child::before {
+            content: '';
+            display: inline-block;
+            width: 1px;
+            height: 13px;
+            background-color: $color-border;
+            position: absolute;
+            top: 4px;
+            left: 15px;
+          }
+        }
+      }
+    }
+  }
+
+  // 헤더 아래 영역
+  .header-bottom {
+    width: 100%;
+    margin-bottom: 10px;
+
+    &-inner {
+      height: 80px;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      // 헤더 아래 영역 왼쪽
+      .left {
+        display: flex;
+        align-items: center;
+        // 로고
+        .logo {
+          width: 180px;
+          height: 100%;
+
+          a {
+            display: block;
+            width: 100%;
+
+            img {
+              width: 100%;
+            }
+          }
+        }
+
+        // 로고 옆 문구
+        .text {
+          font-weight: 500;
+        }
+      }
+
+      // 헤더 아래 영역 오른쪽
+      .right {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-grow: 1;
+        gap: 20px;
+
+        // 검색창
+        .search {
+          height: 40px;
+          background-color: $color-light-grey;
+          border-radius: 20px;
+          display: flex;
+          align-items: center;
+
+          &-items {
+            width: 100%;;
+            display: flex;
+
+            // 검색 입력창
+            input {
+              width: 260px;
+              flex-grow: 1;
+              padding: 0 20px;
+            }
+
+            // 돋보기 아이콘
+            span {
+              padding-right: 10px;
+              cursor: pointer;
+            }
+          }
+        }
+
+        .icon {
+          a {
+            span {
+              font-size: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // 헤더 nav
+  nav {
+    width: 100%;
+    border-bottom: 1px solid $color-light-grey;
+
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      // nav 왼쪽, 오른쪽
+      .left, .right {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        li {
+          position: relative;
+          a {
+            display: inline-block;
+            padding: 14px;
+            font-weight: 500;
+          }
+
+          &:hover {
+            &:after {
+              content: '';
+              display: block;
+              width: 100%;
+              height: 2px;
+              background-color: $color-blue;
+              position: absolute;
+              bottom: 0;
+            }
+          }
+        }
+      }
+
+    }
+  }
+}
