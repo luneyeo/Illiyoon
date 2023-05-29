@@ -13,7 +13,49 @@
   align-items: center;
   justify-content: center;
 }
-
+// 블루
 .blue {
   color: $color-blue;
+}
+
+// 베스트 라벨
+.label-best {
+  background-color: $color-red;
+}
+// 신상 라벨
+.label-new {
+  background-color: $color-blue;
+}
+
+// 할인율
+.discount-percent {
+  font : {
+    size: 1.8rem;
+    weight : bold;
+  }
+  color: $color-red;
+}
+// 할인 적용된 가격
+.special-price {
+  font : {
+    size: 1.8rem;
+    weight : bold;
+  }
+}
+// 원래 가격
+.basic-price {
+  text-decoration-line: line-through;
+  font-size: 1.4rem;
+  color: $color-grey;
+}
+
+// 상품 더보기
+.product-more {
+  .product-more-btn {
+    border: 1px solid $color-border;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-grey;
+  }
 }

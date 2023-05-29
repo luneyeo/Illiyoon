@@ -10,7 +10,8 @@
 
   <!-- Swiper JS -->
   <script defer src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-  <script defer src="/js/index.js"></script>
+  <script defer type="module" src="/js/index.js"></script>
+  <script defer type="module" src="/js/data.js"></script>
 
 </head>
 <body>
@@ -129,15 +130,9 @@
               <img src="/img/main-banner04-pc.jpg" alt="">
             </div>
           </div>
-          <button class="swiper-button-next">
-          </button>
+          <button class="swiper-button-next"></button>
           <button class="swiper-button-prev"></button>
-          <!-- 페이지네이션 -->
-          <div class="swiper-pagination">
-          </div>
-          <span class="material-symbols-outlined">
-            pause
-          </span> 
+          <div class="swiper-pagination"></div>
         </div>
       </article>
 
@@ -145,60 +140,40 @@
       <article class="first-wrapper">
         <!-- 첫 번째 메인 타이틀 영역 -->
         <div class="main-tit-area">
-          <h2 class="main-tit"><p>지금 여기, 오직 공식몰에서만</p></h2>
+          <h2 class="main-tit"><span>지금 여기, 오직 공식몰에서만</span></h2>
         </div>
         <!-- 첫 번째 배너 영역 -->
         <div class="first-area-banner">
-          <div class="swiper"></div>
+          <div class="swiper first-banner first-banner-pc">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="/img/first-area-banner01.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="/img/first-area-banner02.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="/img/first-area-banner03.jpg" alt="">
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
         </div>
         <!-- 첫 번째 제품 영역 -->
         <div class="first-area-inner">
           <ul class="product-items">
-            <!-- 제품 아이템 -->
-            <li class="product-item">
-              <!-- 제품 사진 -->
-              <div class="product-item-image">
-                <a href="javascript:;">
-                  <img src="" alt="일리윤 프레쉬모이스춰 폼폼푸린 로션 350ml[다꾸 스티커 증정]">
-                  <div class="sold-out"><span>일시품절</span></div>
-                </a>
-              </div>
-              <!-- 제품 정보 -->
-              <div class="product-item-info">
-                <!-- 제품 라벨 -->
-                <ul class="item-labels">
-                  <li class="label label-best"><span>BEST</span></li>
-                  <li class="label label-new"><span>NEW</span></li>
-                </ul>
-                <!-- 제품명 -->
-                <div class="item-name"></div>
-                <!-- 제품 가격 -->
-                <div class="item-price-box">
-                  <div class="discount-percent"></div>
-                  <div class="special-price"></div>
-                  <div class="basic-price"></div>
-                </div>
-                <!-- 제품 리뷰 -->
-                <div class="item-review-box">
-                  <div class="review-star"></div>
-                  | 리뷰 66
-                </div>
-                <!-- 제품 위시리스트, 장바구니 -->
-                <div class="item-button-box">
-                  <div class="product-wishlist"></div>
-                  <div class="product-bag"></div>
-                </div>
-              </div>
-            </li>
+            <!-- JS -->
           </ul>
+          <!-- 첫 번째 상품 더보기 -->
+          <div class="product-more first-area-more">
+            <button class="product-more-btn">
+              <span>상품 더보기</span>
+              <span class="material-symbols-outlined">chevron_right</span>
+            </button>
+          </div>
         </div>
-        <!-- 첫 번째 상품 더보기 -->
-        <div class="product-more first-area-more">
-          <button class="product-more-btn">
-            <span>상품 더보기</span>
-            <span class="material-symbols-outlined">chevron_right</span>
-          </button>
-        </div>
+        
+
       </article>
 
       <!-- 두 번째 영역 / 놓치면 후회 -->
