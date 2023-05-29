@@ -172,8 +172,6 @@
             </button>
           </div>
         </div>
-        
-
       </article>
 
       <!-- 두 번째 영역 / 놓치면 후회 -->
@@ -186,10 +184,9 @@
         <div class="second-area-inner">
           <div class="product-section">
             <!-- 제품 왼쪽 영역 / 베스트 탭 -->
-            <div class="product-section-left">
+            <div class="product-section-item best-items">
               <!-- 왼쪽 영역 배경 이미지, 설명 글 -->
               <div class="section-bg">
-                <div class="section-bg-img"></div>
                 <div class="section-bg-text">
                   <p>실 구매 데이터를 바탕으로 선정된 <br> 베스트 상품이에요.</p>
                   <p class="tit">일리윤의 찐 인기템</p>
@@ -197,42 +194,28 @@
               </div>
               <!-- 제품 -->
               <ul class="product-items">
-                <!-- 제품 아이템 -->
-                <li class="product-item">
-                  <!-- 제품 사진 -->
-                  <div class="product-item-image">
-                    <a href="javascript:;">
-                      <img src="" alt="일리윤 프레쉬모이스춰 폼폼푸린 로션 350ml[다꾸 스티커 증정]">
-                      <div class="sold-out"><span>일시품절</span></div>
-                    </a>
-                  </div>
-                  <!-- 제품 정보 -->
-                  <div class="product-item-info">
-                    <!-- 제품 라벨 -->
-                    <ul class="item-labels">
-                      <li class="label label-best"><span>BEST</span></li>
-                      <li class="label label-new"><span>NEW</span></li>
-                    </ul>
-                    <!-- 제품명 -->
-                    <div class="item-name"></div>
-                    <!-- 제품 가격 -->
-                    <div class="item-price-box">
-                      <div class="discount-percent"></div>
-                      <div class="special-price"></div>
-                      <div class="basic-price"></div>
-                    </div>
-                    <!-- 제품 리뷰 -->
-                    <div class="item-review-box">
-                      <div class="review-star"></div>
-                      | 리뷰 66
-                    </div>
-                    <!-- 제품 위시리스트, 장바구니 -->
-                    <div class="item-button-box">
-                      <div class="product-wishlist"></div>
-                      <div class="product-bag"></div>
-                    </div>
-                  </div>
-                </li>
+                <!-- JS -->
+              </ul>
+              <!-- 상품 더보기 -->
+              <div class="product-more">
+                <button class="product-more-btn">
+                  <span>상품 더보기</span>
+                  <span class="material-symbols-outlined">chevron_right</span>
+                </button>
+              </div>
+            </div>
+            <!-- 제품 오른쪽 영역 / 신상 탭 -->
+            <div class="product-section-item new-items">
+              <!-- 왼쪽 영역 배경 이미지, 설명 글 -->
+              <div class="section-bg">
+                <div class="section-bg-text">
+                  <p>민감 피부만 생각해온 진심을 담은 <br>일리윤의 신제품이에요.</p>
+                  <p class="tit">NEW Arrivals</p>
+                </div>
+              </div>
+              <!-- 제품 -->
+              <ul class="product-items">
+                <!-- JS -->
               </ul>
               <!-- 상품 더보기 -->
               <div class="product-more">
@@ -250,7 +233,7 @@
       <article class="third-wrapper">
         <!-- 세 번째 배너 영역 -->
         <div class="third-area-banner">
-          <img src="" alt="일리윤 온가족 선크림">
+          <img src="/img/third-area-banner-pc.jpg" alt="일리윤 온가족 선크림">
         </div>
         <!-- 세 번째 메인 타이틀 영역 -->
         <div class="main-tit-area">
@@ -258,43 +241,55 @@
         </div>
         <!-- 세 번째 제품 영역 -->
         <div class="third-area-inner">
-          <div class="product-item">
-            <!-- 제품 사진 -->
-            <div class="product-item-image">
-              <a href="javascript:;">
-                <img src="" alt="일리윤 프레쉬모이스춰 폼폼푸린 로션 350ml[다꾸 스티커 증정]">
-                <div class="sold-out"><span>일시품절</span></div>
-              </a>
-            </div>
-            <!-- 제품 정보 -->
-            <div class="product-item-info">
-              <div class="item-tit">
-                민감피부를 위한 <br> 저자극 더마 보습 솔루션
+          <ul class="product-items">
+            <div class="product-item">
+              <!-- 제품 사진 -->
+              <div class="product-item-image">
+                <a href="javascript:;">
+                  <img src="/img/third-product01.jpg" alt="일리윤 세라마이드 아토 로션세트 [로션300ml2입+여행용3종미니어쳐] / 순한보습">
+                </a>
               </div>
-              <!-- 제품 라벨 -->
-              <ul class="item-labels">
-                <li class="label label-best"><span>BEST</span></li>
-              </ul>
-              <!-- 제품명 -->
-              <div class="item-name"></div>
-              <!-- 제품 가격 -->
-              <div class="item-price-box">
-                <div class="discount-percent"></div>
-                <div class="special-price"></div>
-                <div class="basic-price"></div>
+              <!-- 제품 정보 -->
+              <div class="product-item-info">
+                <div class="item-tit">
+                  <span>민감피부를 위한 저자극 더마 보습 솔루션</span>
+                </div>
+                <!-- 제품 라벨 -->
+                <ul class="item-labels">
+                  <li class="label label-best"><span>BEST</span></li>
+                </ul>
+                <!-- 제품명 -->
+                <div class="item-name">
+                  <span>일리윤 세라마이드 아토 로션세트 [로션300ml2입+여행용3종미니어쳐] / 순한보습</span>
+                </div>
+                <!-- 제품 가격 -->
+                <div class="item-price-box">
+                  <span class="discount-percent">37%</span>
+                  <span class="special-price">23,600원</span>
+                  <span class="basic-price">37,200원</span>
+                </div>
+                <!-- 제품 리뷰 -->
+                <div class="item-review-box">
+                  <div class="review-star"></div>
+                  | 리뷰 243
+                </div>
+                
               </div>
-              <!-- 제품 리뷰 -->
-              <div class="item-review-box">
-                <div class="review-star"></div>
-                | 리뷰 66
+              <!-- 제품 위시리스트, 장바구니 -->
+              <div class="item-button-box">
+                <div class="product-wishlist">
+                <span class="material-symbols-outlined">favorite
+                  <span class="blind">위시리스트</span>
+                </span>
+                </div>
+                <div class="product-bag">
+                  <span class="material-symbols-outlined">shopping_bag
+                    <span class="blind">장바구니</span>
+                  </span>
+                </div>
               </div>
             </div>
-            <!-- 제품 위시리스트, 장바구니 -->
-            <div class="item-button-box">
-              <div class="product-wishlist"></div>
-              <div class="product-bag"></div>
-            </div>
-          </div>
+          </ul>
         </div>
       </article>
 

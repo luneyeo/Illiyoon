@@ -18,44 +18,199 @@
   color: $color-blue;
 }
 
-// 베스트 라벨
-.label-best {
-  background-color: $color-red;
-}
-// 신상 라벨
-.label-new {
-  background-color: $color-blue;
+// 메인 타이틀
+.main-tit-area {
+  width: 100%;
+
+  .main-tit {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 0 40px;
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 500;
+  }
+  
 }
 
-// 할인율
-.discount-percent {
-  font : {
-    size: 1.8rem;
-    weight : bold;
+// 제품
+.product-items {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  .product-item {
+    width: 100%;
+    padding: 26px;
+
+    // 제품 이미지 영역
+    &-image {
+      width: 100%;
+      aspect-ratio: 1/1;
+      background-color: aqua;
+      border-radius: 10px;
+      overflow: hidden;
+
+      a {
+        height: 100%;
+        display: block;
+        position: relative;
+        
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
+
+        // 일시품절
+        .sold-out {
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0,0,0, .5);
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          span {
+            color: $color-white;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+
+    // 제품 정보
+    &-info {
+      width: 100%;
+      margin-top: 20px;
+      position: relative;
+
+      // 제품 라벨
+      .item-labels {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 6px;
+        position: absolute;
+        top: 0;
+
+        .label {
+          border-radius: 2px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: 6px;
+
+          span {
+            display: inline-block;
+            padding: 2px 5px 4px;
+            color: $color-white;
+            font-size: 1.1rem;
+          }
+        }
+
+        // 베스트 라벨
+        .label-best {
+          background-color: $color-red;
+        }
+        // 신상 라벨
+        .label-new {
+          background-color: $color-blue;
+        }
+      }
+
+      // 제품명
+      .item-name {
+        padding-top: 32px;
+        height: 80px;
+        overflow: hidden;
+        word-break: break-all;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+
+      // 제품 가격
+      .item-price-box {
+        margin: 2px 0;
+        // 할인율
+        .discount-percent {
+          font : {
+            size: 1.8rem;
+            weight : bold;
+          }
+          color: $color-red;
+        }
+        // 할인 적용된 가격
+        .special-price {
+          font : {
+            size: 1.8rem;
+            weight : bold;
+          }
+        }
+        // 원래 가격
+        .basic-price {
+          text-decoration-line: line-through;
+          font-size: 1.4rem;
+          color: $color-grey;
+        }
+      }
+
+      // 제품 리뷰
+      .item-review-box {
+        font : {
+          size: 1.3rem;
+          weight: 500;
+        }
+        color: $color-grey;
+        
+      }
+      // 제품 위시리스트, 장바구니
+      .item-button-box {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 14px 0;
+        div {
+          width: 50px;
+          
+          span {
+            font-size: 30px;
+            opacity: .4;
+            cursor: pointer;
+
+            &:hover {
+              color: $color-blue;
+              opacity: 1;
+            }
+          }
+        }
+      }
+
+    }
   }
-  color: $color-red;
-}
-// 할인 적용된 가격
-.special-price {
-  font : {
-    size: 1.8rem;
-    weight : bold;
-  }
-}
-// 원래 가격
-.basic-price {
-  text-decoration-line: line-through;
-  font-size: 1.4rem;
-  color: $color-grey;
 }
 
-// 상품 더보기
+
+
+// 상품 더보기 버튼
 .product-more {
   .product-more-btn {
+    padding: 10px 0;
     border: 1px solid $color-border;
+    border-radius: 3px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: $color-grey;
+    span {
+      font-size: 1.6rem;
+    }
+    .material-symbols-outlined {
+      font-size: 2rem ;
+    }
   }
 }

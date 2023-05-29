@@ -76,22 +76,9 @@
 // 첫번째 영역 / 공식몰에서만
 .first-wrapper {
   width: 100%;
-  border-bottom: 5px solid red;
-  
-  // 첫번째 영역 메인 타이틀
-  .main-tit-area {
-    width: 100%;
 
-    .main-tit {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 60px 0 40px;
-      text-align: center;
-      font-size: 2.4rem;
-      font-weight: 500;
-    }
-    
-  }
+  // 첫번째 영역 메인 타이틀
+  // base.scss
 
   // 첫번째 영역 배너
   .first-area-banner {
@@ -132,154 +119,154 @@
     margin: 0 auto;
 
     // 제품
-    .product-items {
-      width: 100%;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
+    // base.scss
 
-      .product-item {
-        width: 100%;
-        // background-color: orange;
-        padding: 26px;
-
-        // 제품 이미지 영역
-        &-image {
-          width: 100%;
-          aspect-ratio: 1/1;
-          background-color: aqua;
-          border-radius: 10px;
-          overflow: hidden;
-
-          a {
-            height: 100%;
-            display: block;
-            position: relative;
-            
-            img {
-              width: 100%;
-              object-fit: cover;
-            }
-
-            // 일시품절
-            .sold-out {
-              width: 100%;
-              height: 100%;
-              background-color: rgba(0,0,0, .5);
-              position: absolute;
-              top: 0;
-              left: 0;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-
-              span {
-                color: $color-white;
-                font-weight: 500;
-              }
-            }
-          }
-        }
-
-        // 제품 정보
-        &-info {
-          width: 100%;
-          margin-top: 20px;
-          position: relative;
-
-          // 제품 라벨
-          .item-labels {
-            width: 100%;
-            display: flex;
-            flex-wrap: wrap;
-            margin-bottom: 6px;
-            position: absolute;
-            top: 0;
-
-            .label {
-              border-radius: 2px;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              margin-right: 6px;
-
-              span {
-                display: inline-block;
-                padding: 2px 5px 4px;
-                color: $color-white;
-                font-size: 1.1rem;
-              }
-            }
-          }
-
-          // 제품명
-          .item-name {
-            padding-top: 32px;
-            height: 80px;
-            overflow: hidden;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-          }
-
-          // 제품 가격
-          .item-price-box {
-            margin: 2px 0;
-          }
-
-          // 제품 리뷰
-          .item-review-box {
-            font : {
-              size: 1.3rem;
-              weight: 500;
-            }
-            color: $color-grey;
-            
-          }
-          // 제품 위시리스트, 장바구니
-          .item-button-box {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 14px 0;
-            div {
-              width: 50px;
-              
-              span {
-                font-size: 30px;
-                opacity: .4;
-                cursor: pointer;
-
-                &:hover {
-                  color: $color-blue;
-                  opacity: 1;
-                }
-              }
-            }
-          }
-
-        }
-      }
-    }
-
-    // 상품 더보기
+    // 상품 더보기 버튼
+    // base.scss
     .first-area-more {
       width: 600px;
-      margin: 10px auto;
+      margin: 0px auto;
+      padding: 20px 0;
 
       .product-more-btn {
         width: 100%;
-        padding: 10px 0;
-        border-radius: 3px;
-        span {
-          font-size: 1.6rem;
-        }
-        .material-symbols-outlined {
-          font-size: 2rem ;
-        }
       }
     }
   }
 
 
+}
+
+
+// 두 번째 영역 / 놓치면 후회
+.second-wrapper {
+  width: 100%;
+  padding-top: 48px;
+
+  // 두 번째 메인 타이틀
+  // base.scss
+
+  // 두 번째 제품 영역
+  .second-area-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .product-section {
+      width: 100%;
+      // background-color: blue;
+      display: flex;
+
+      &-item {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+
+        // 섹션 배경
+        .section-bg {
+          width: 100%;
+          height: 340px;
+          object-fit: cover;
+
+          &-text {
+            padding: 50px;
+            font-size: 1.8rem;
+
+            .tit {
+              font-size: 2.6rem;
+              font-weight: 500;
+              margin: 10px 0;
+            }
+          }
+        }
+
+        // 제품
+        .product-items {
+          width: 100%;
+          padding: 0 30px;
+          margin-top: -140px;
+          grid-template-columns: repeat(2, 1fr);
+
+          .product-item {
+            background-color: $color-white;
+          }
+        }
+
+        // 상품 더보기 버튼
+        // base.scss
+        .product-more {
+          &-btn {
+            width: 90%;
+          }
+        }
+      }
+      &-item.best-items {
+        margin-right: 20px;
+        
+        .section-bg{
+          background-image: url('/img/best-items-pc.jpg');
+          background-size: 100%;
+        }
+      }
+      &-item.new-items {
+        margin-left: 20px;
+
+        .section-bg {
+          background-image: url('/img/new-items-pc.jpg');
+          background-size: 100%;
+        }
+      }
+
+
+      
+    }
+  }
+}
+
+// 세 번째 영역 / 찐이륜의 추천템
+.third-wrapper {
+  width: 100%;
+  padding-top: 90px;
+  border-bottom: 5px solid red;
+
+  // 세 번째 영역 배너
+  .third-area-banner {
+    width: 100%;
+    margin-bottom: 30px;
+
+    img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+    }
+  }
+
+  // 세 번째 제품 영역
+  .third-area-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    .product-items {
+      display: block;
+      padding: 0 100px;
+      .product-item {
+        display: flex;
+        align-items: center;
+
+        // 제품 사진
+        &-image {
+          width: 450px;
+        }
+
+        // 제품 정보
+        &-info {
+          margin-left: 50px;
+          .item-tit {
+            font: {
+              size: 2rem;
+              weight : 500;
+            }
+          }
+        }
+      }
+    }
+  }
 }

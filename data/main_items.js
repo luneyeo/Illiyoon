@@ -12,6 +12,7 @@ export default [
   },
   {
     img : '/img/first-product02.jpg',
+    alt: '일리윤 저자극 무기자차 선크림 50ml',
     label_bset : '',
     label_new : '',
     name : '일리윤 저자극 무기자차 선크림 50ml',
@@ -22,6 +23,7 @@ export default [
   },
   {
     img : '/img/first-product03.jpg',
+    alt: '[대용량] NEW 일리윤 세라마이드 아토 버블워시 앤 샴푸 900ml / 약산성 순한 워시',
     label_bset : '',
     label_new : '',
     name : '[대용량] NEW 일리윤 세라마이드 아토 버블워시 앤 샴푸 900ml / 약산성 순한 워시',
@@ -32,6 +34,7 @@ export default [
   },
   {
     img : '/img/first-product04.jpg',
+    alt : '일리윤 MD 레드이치 케어크림 330ml / 소아과테스트 완료 식약처인증 가려움크림 / 아기 영유아',
     label_bset : 'BEST',
     label_new : 'NEW',
     name : '일리윤 MD 레드이치 케어크림 330ml / 소아과테스트 완료 식약처인증 가려움크림 / 아기 영유아',
