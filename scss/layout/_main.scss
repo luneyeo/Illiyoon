@@ -226,7 +226,7 @@
 .third-wrapper {
   width: 100%;
   padding-top: 90px;
-  border-bottom: 5px solid red;
+  // border-bottom: 5px solid red;
 
   // 세 번째 영역 배너
   .third-area-banner {
@@ -244,29 +244,104 @@
   .third-area-inner {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 100px;
     .product-items {
       display: block;
-      padding: 0 100px;
       .product-item {
         display: flex;
         align-items: center;
 
         // 제품 사진
         &-image {
-          width: 450px;
+          max-width: 290px;
         }
 
         // 제품 정보
         &-info {
-          margin-left: 50px;
+          margin: 0 20px 0 50px;
           .item-tit {
             font: {
-              size: 2rem;
+              size: 2.6rem;
               weight : 500;
+            }
+            line-height: 130%;
+            margin-bottom: 20px;
+          }
+
+          // 제품 라벨
+          .item-labels {
+            position: static;
+            margin-bottom: 12px;
+            .label {
+              span {
+                font-size: 1.4rem;
+
+              }
+            }
+          }
+          // 제품명
+          .item-name {
+            height: auto;
+            padding-top: 0;
+            span {
+              font-size: 1.8rem;
+            }
+          }
+
+          // 제품 가격
+          .item-price-box {
+            margin: 5px 0;
+            .discount-percent {
+              font-size: 2.2rem;
+            }
+            .special-price {
+              font-size: 2.2rem;
+            }
+            .basic-price {
+              font-size: 1.6rem;
+            }
+          }
+        }
+
+        // 제품 위시리스트, 장바구니
+        &-button-box {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          div {
+            width: 50px;
+            span {
+              font-size: 34px;
+              opacity: .3;
+              cursor: pointer;
+
+              &:hover {
+                color: $color-blue;
+                opacity: 1;
+              }
             }
           }
         }
       }
+    }
+  }
+}
+
+
+// 네 번째 영역 / 지금 가장 인기 있는 상품
+.fourth-wrapper {
+  width: 100%;
+  padding-top: 40px;
+  border-bottom: 5px solid red;
+
+  .fourth-area-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 100px;
+
+    .product-items {
+      display: block;
+      width: 50%;
     }
   }
 }

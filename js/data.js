@@ -164,3 +164,5 @@ newItems.forEach(productList => {
   `
   newItemsEl.append(itemEl)
 })
+
+

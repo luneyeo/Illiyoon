@@ -367,7 +367,6 @@ ul, ol, li {
 .third-wrapper {
   width: 100%;
   padding-top: 90px;
-  border-bottom: 5px solid red;
 }
 .third-wrapper .third-area-banner {
   width: 100%;
@@ -381,24 +380,84 @@ ul, ol, li {
 .third-wrapper .third-area-inner {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 100px;
 }
 .third-wrapper .third-area-inner .product-items {
   display: block;
-  padding: 0 100px;
 }
 .third-wrapper .third-area-inner .product-items .product-item {
   display: flex;
   align-items: center;
 }
 .third-wrapper .third-area-inner .product-items .product-item-image {
-  width: 450px;
+  max-width: 290px;
 }
 .third-wrapper .third-area-inner .product-items .product-item-info {
-  margin-left: 50px;
+  margin: 0 20px 0 50px;
 }
 .third-wrapper .third-area-inner .product-items .product-item-info .item-tit {
-  font-size: 2rem;
+  font-size: 2.6rem;
   font-weight: 500;
+  line-height: 130%;
+  margin-bottom: 20px;
+}
+.third-wrapper .third-area-inner .product-items .product-item-info .item-labels {
+  position: static;
+  margin-bottom: 12px;
+}
+.third-wrapper .third-area-inner .product-items .product-item-info .item-labels .label span {
+  font-size: 1.4rem;
+}
+.third-wrapper .third-area-inner .product-items .product-item-info .item-name {
+  height: auto;
+  padding-top: 0;
+}
+.third-wrapper .third-area-inner .product-items .product-item-info .item-name span {
+  font-size: 1.8rem;
+}
+.third-wrapper .third-area-inner .product-items .product-item-info .item-price-box {
+  margin: 5px 0;
+}
+.third-wrapper .third-area-inner .product-items .product-item-info .item-price-box .discount-percent {
+  font-size: 2.2rem;
+}
+.third-wrapper .third-area-inner .product-items .product-item-info .item-price-box .special-price {
+  font-size: 2.2rem;
+}
+.third-wrapper .third-area-inner .product-items .product-item-info .item-price-box .basic-price {
+  font-size: 1.6rem;
+}
+.third-wrapper .third-area-inner .product-items .product-item-button-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.third-wrapper .third-area-inner .product-items .product-item-button-box div {
+  width: 50px;
+}
+.third-wrapper .third-area-inner .product-items .product-item-button-box div span {
+  font-size: 34px;
+  opacity: 0.3;
+  cursor: pointer;
+}
+.third-wrapper .third-area-inner .product-items .product-item-button-box div span:hover {
+  color: #38a1f9;
+  opacity: 1;
+}
+
+.fourth-wrapper {
+  width: 100%;
+  padding-top: 40px;
+  border-bottom: 5px solid red;
+}
+.fourth-wrapper .fourth-area-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 100px;
+}
+.fourth-wrapper .fourth-area-inner .product-items {
+  display: block;
+  width: 50%;
 }
 
 header {

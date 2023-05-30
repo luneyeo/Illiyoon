@@ -35,7 +35,7 @@ export default [
   {
     img : '/img/new-product04.jpg',
     alt : '일리윤 프레쉬모이스춰 스크럽워시 폼폼푸린 기획 [400ml 2입 + 다꾸스티커]',
-    label_bset : 'BEST',
+    label_bset : '공식몰 ONLY',
     label_new : 'NEW',
     name : '일리윤 프레쉬모이스춰 스크럽워시 폼폼푸린 기획 [400ml 2입 + 다꾸스티커]',
     discount_percent : '39%',
