@@ -4,7 +4,72 @@ footer {
 
   .footer-inner {
     max-width: 1200px;
+    margin: 0 auto;
     color: $color-white;
     font-size: 1.4rem;
+
+    // 푸터 위 영역
+    .footer-top {
+      width: 100%;
+      padding: 20px 0;
+      border-bottom: 1px solid #999;
+      .footer-menu-items {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+
+        .footer-menu-item {
+          margin-right: 30px;
+          a {
+            width: 100%;
+            display: block;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+
+    // 푸터 아래 영역
+    .footer-bottom {
+      width: 100%;
+      padding: 40px 0;
+      .footer-info-items {
+        font-size: 1.3rem;
+        font-weight: 500;
+        color: #999;
+        .footer-info-item {
+          margin-bottom: 8px;
+          
+          span {
+            margin-right: 24px;
+          }
+          .info-link {
+            color: #fff;
+            font-size: 1.2rem;
+            margin-left: -20px;
+          }
+        }
+      }
+    }
   }
+}
+
+
+// Top Button
+.top-button {
+  width: 50px;
+  aspect-ratio: 1/1;
+  background-color: #fff;
+  border-radius: 50%;
+  border : 1px solid $color-border;
+  position: fixed;
+  bottom: 7%;
+  right: 2%;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }

@@ -191,6 +191,7 @@ body, h1, h2, h3, h4 {
 
 body {
   overflow-x: hidden;
+  position: relative;
 }
 
 a {
@@ -520,8 +521,65 @@ footer {
 }
 footer .footer-inner {
   max-width: 1200px;
+  margin: 0 auto;
   color: #fff;
   font-size: 1.4rem;
+}
+footer .footer-inner .footer-top {
+  width: 100%;
+  padding: 20px 0;
+  border-bottom: 1px solid #999;
+}
+footer .footer-inner .footer-top .footer-menu-items {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+footer .footer-inner .footer-top .footer-menu-items .footer-menu-item {
+  margin-right: 30px;
+}
+footer .footer-inner .footer-top .footer-menu-items .footer-menu-item a {
+  width: 100%;
+  display: block;
+}
+footer .footer-inner .footer-top .footer-menu-items .footer-menu-item a:hover {
+  text-decoration: underline;
+}
+footer .footer-inner .footer-bottom {
+  width: 100%;
+  padding: 40px 0;
+}
+footer .footer-inner .footer-bottom .footer-info-items {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #999;
+}
+footer .footer-inner .footer-bottom .footer-info-items .footer-info-item {
+  margin-bottom: 8px;
+}
+footer .footer-inner .footer-bottom .footer-info-items .footer-info-item span {
+  margin-right: 24px;
+}
+footer .footer-inner .footer-bottom .footer-info-items .footer-info-item .info-link {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-left: -20px;
+}
+
+.top-button {
+  width: 50px;
+  aspect-ratio: 1/1;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 1px solid #C5C8CE;
+  position: fixed;
+  bottom: 7%;
+  right: 2%;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 header {
