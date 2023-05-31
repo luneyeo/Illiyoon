@@ -7,8 +7,18 @@
     height: 100%;
     z-index: 0;
 
+    @include mobile {
+      .swiper-button-next,
+      .swiper-button-prev {
+        display: none;
+      }
+    }
+
     // 배너 영역
     &-wrapper {
+      @include mobile {
+        display: none;
+      }
       .swiper-slide {
         img {
           width: 100%;
@@ -18,32 +28,37 @@
         }
       }
     }
+    &-wrapper.mo {
+      display: none;
+      min-height: 510px;
+      @include mobile {
+        display: flex;
+      }
+    }
 
     // 배너 다음 버튼
     &-button-next {
       display: block;
-      right: 50%;
-      margin-right: -600px;
+      right: 5%;
       color: $color-black;
       opacity: 1;
 
       // 버튼 크기
       &:after {
-        font-size: 50px;
+        font-size: 3vw;
       }
     }
     // 배너 이전 버튼
     &-button-prev {
       display: block;
-      left: 50%;
-      margin-left: -600px;
+      left: 5%;
       color: $color-black;
       opacity: 1;
 
 
       // 버튼 크기
       &:after {
-        font-size: 50px;
+        font-size: 3vw;
       }
     }
 
@@ -54,8 +69,8 @@
       width: 80px;
       height: 34px;
       left: auto;
-      right: 50%;
-      margin-right: -600px;
+      right: 5%;
+      // margin-right: -600px;
       margin-bottom: 30px;
       background-color: rgba(0,0,0, .4);
       border-radius: 39px;
@@ -63,6 +78,11 @@
       justify-content: center;
       color : $color-white;
       gap: 4px;
+
+      @include mobile {
+        right: 5%;
+        margin-right: 0px;
+      }
 
       .swiper-pagination-total {
         opacity: .7;
@@ -89,6 +109,15 @@
       width: 100%;
       height: 100%;
       z-index: 0;
+
+      @include mobile {
+        .swiper-wrapper {
+          display: none;
+        }
+        .swiper-wrapper.mo {
+          display: flex;
+        }
+      }
   
       // 배너 영역
       &-wrapper {
@@ -102,6 +131,11 @@
           }
         }
       }
+      &-wrapper.mo {
+        display: none;
+        min-height: 80px;
+      }
+
 
       // 페이지네이션 영역
       .swiper-pagination {
@@ -134,6 +168,18 @@
     }
   }
 
+  @include mobile {
+    .first-area-inner {
+      padding: 0 16px;
+    }
+    .product-items {
+      grid-template-columns: repeat(2, 1fr);
+
+      .product-item {
+        padding: 10px;
+      }
+    }
+  }
 
 }
 
