@@ -14,15 +14,16 @@ mainItems.forEach(productList => {
     <div class="product-item-image">
       <a href="javascript:;">
         <img src="${productList.img}" alt="${productList.alt}">
-        <!-- <div class="sold-out"><span>일시품절</span></div> -->
+        ${productList.sold_out}
       </a>
     </div>
     <!-- 제품 정보 -->
     <div class="product-item-info">
       <!-- 제품 라벨 -->
       <ul class="item-labels">
-        <li class="label label-best"><span>${productList.label_bset}</span></li>
-        <li class="label label-new"><span>${productList.label_new}</span></li>
+        ${productList.label_bset}
+        ${productList.label_new}
+        ${productList.label_only}
       </ul>
       <!-- 제품명 -->
       <div class="item-name">
@@ -68,15 +69,16 @@ bestItems.forEach(productList => {
     <div class="product-item-image">
       <a href="javascript:;">
         <img src="${productList.img}" alt="${productList.alt}">
-        <!-- <div class="sold-out"><span>일시품절</span></div> -->
+        ${productList.sold_out}
       </a>
     </div>
     <!-- 제품 정보 -->
     <div class="product-item-info">
       <!-- 제품 라벨 -->
       <ul class="item-labels">
-        <li class="label label-best"><span>${productList.label_bset}</span></li>
-        <li class="label label-new"><span>${productList.label_new}</span></li>
+        ${productList.label_bset}
+        ${productList.label_new}
+        ${productList.label_only}
       </ul>
       <!-- 제품명 -->
       <div class="item-name">
@@ -111,7 +113,7 @@ bestItems.forEach(productList => {
   bestItemsEl.append(itemEl)
 })
 
-// 베스트 제품 리스트
+// 신상 제품 리스트
 const newItemsEl = document.querySelector('.new-items .product-items')
 newItems.forEach(productList => {
   const itemEl = document.createElement('li')
@@ -122,15 +124,16 @@ newItems.forEach(productList => {
     <div class="product-item-image">
       <a href="javascript:;">
         <img src="${productList.img}" alt="${productList.alt}">
-        <!-- <div class="sold-out"><span>일시품절</span></div> -->
+        ${productList.sold_out}
       </a>
     </div>
     <!-- 제품 정보 -->
     <div class="product-item-info">
       <!-- 제품 라벨 -->
       <ul class="item-labels">
-        <li class="label label-best"><span>${productList.label_bset}</span></li>
-        <li class="label label-new"><span>${productList.label_new}</span></li>
+        ${productList.label_bset}
+        ${productList.label_new}
+        ${productList.label_only}
       </ul>
       <!-- 제품명 -->
       <div class="item-name">

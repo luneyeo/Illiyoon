@@ -37,7 +37,7 @@
 }
 .product-items .product-item {
   width: 100%;
-  padding: 26px;
+  padding: 18px;
 }
 .product-items .product-item-image {
   width: 100%;
@@ -101,6 +101,9 @@
 }
 .product-items .product-item-info .item-labels .label-new {
   background-color: #38a1f9;
+}
+.product-items .product-item-info .item-labels .label-only {
+  background-color: #ff9533;
 }
 .product-items .product-item-info .item-name {
   padding-top: 32px;

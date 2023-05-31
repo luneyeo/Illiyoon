@@ -41,7 +41,7 @@
 
   .product-item {
     width: 100%;
-    padding: 26px;
+    padding: 18px;
 
     // 제품 이미지 영역
     &-image {
@@ -118,6 +118,10 @@
         // 신상 라벨
         .label-new {
           background-color: $color-blue;
+        }
+        // 공식몰 only 라벨
+        .label-only {
+          background-color: $color-orange;
         }
       }
 
