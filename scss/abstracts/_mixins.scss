@@ -8,6 +8,7 @@ $max-width : 1200px;
 @mixin mobile{
   @media (max-width: $mobile){
     @content;
+    letter-spacing: -1px;
   }
 }
 

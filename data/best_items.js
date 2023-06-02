@@ -29,7 +29,7 @@ export default [
     label_bset : '<li class="label label-best"><span>BEST</span></li>',
     label_new : '',
     label_only : '',
-    name : '일리윤 세라마이드 아토 로션 528ml+68ml 2개 / 대용량 순한보습일',
+    name : '일리윤 세라마이드 아토 로션 528ml+68ml 2개 / 대용량 순한보습',
     discount_percent : '16%',
     special_price : '20,900원',
     basic_price : '24,900원',
