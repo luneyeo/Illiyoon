@@ -106,12 +106,12 @@
   align-items: center;
   justify-content: center;
   margin-right: 6px;
+  font-size: 1.1rem;
 }
 .product-items .product-item-info .item-labels .label span {
   display: inline-block;
   padding: 2px 5px 4px;
   color: #fff;
-  font-size: 1.1rem;
 }
 .product-items .product-item-info .item-labels .label-best {
   background-color: #d4415e;
@@ -147,6 +147,23 @@
   text-decoration-line: line-through;
   font-size: 1.4rem;
   color: #727982;
+}
+@media (max-width: 767px) {
+  .product-items .product-item-info {
+    letter-spacing: -1px;
+  }
+  .product-items .product-item-info .item-price-box {
+    margin: 2px 0;
+  }
+  .product-items .product-item-info .item-price-box .discount-percent {
+    font-size: 1.5rem;
+  }
+  .product-items .product-item-info .item-price-box .special-price {
+    font-size: 1.5rem;
+  }
+  .product-items .product-item-info .item-price-box .basic-price {
+    font-size: 1.3rem;
+  }
 }
 .product-items .product-item-info .item-review-box {
   font-size: 1.3rem;
@@ -535,18 +552,6 @@ ul, ol, li {
     height: auto;
     padding-top: 26px;
   }
-  .second-wrapper .second-area-inner .product-section-item .product-items .product-item-info .item-price-box {
-    margin: 2px 0;
-  }
-  .second-wrapper .second-area-inner .product-section-item .product-items .product-item-info .item-price-box .discount-percent {
-    font-size: 1.5rem;
-  }
-  .second-wrapper .second-area-inner .product-section-item .product-items .product-item-info .item-price-box .special-price {
-    font-size: 1.5rem;
-  }
-  .second-wrapper .second-area-inner .product-section-item .product-items .product-item-info .item-price-box .basic-price {
-    font-size: 1.3rem;
-  }
   .second-wrapper .second-area-inner .product-section-item .product-items .product-item-info .item-button-box {
     padding: 6px 0 0;
     justify-content: flex-start;
@@ -636,14 +641,12 @@ ul, ol, li {
   position: static;
   margin-bottom: 12px;
 }
-.third-wrapper .third-area-inner .product-items .product-item-info .item-labels .label span {
+.third-wrapper .third-area-inner .product-items .product-item-info .item-labels .label {
   font-size: 1.4rem;
 }
 .third-wrapper .third-area-inner .product-items .product-item-info .item-name {
   height: auto;
   padding-top: 0;
-}
-.third-wrapper .third-area-inner .product-items .product-item-info .item-name span {
   font-size: 1.8rem;
 }
 .third-wrapper .third-area-inner .product-items .product-item-info .item-price-box {
@@ -680,12 +683,59 @@ ul, ol, li {
     padding-top: 40px;
     letter-spacing: -1px;
   }
+  .third-wrapper .third-area-banner {
+    margin-bottom: 0;
+  }
   .third-wrapper .third-area-banner img.pc {
     display: none;
   }
   .third-wrapper .third-area-banner img.mo {
     display: block;
     height: auto;
+  }
+  .third-wrapper .third-area-inner {
+    padding: 0 24px;
+  }
+  .third-wrapper .third-area-inner .product-items .product-item {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    padding: 0;
+  }
+  .third-wrapper .third-area-inner .product-items .product-item-image {
+    max-width: 100%;
+    margin-bottom: 20px;
+    grid-column: 1/8;
+  }
+  .third-wrapper .third-area-inner .product-items .product-item-info {
+    margin: 0;
+    grid-column: 1/7;
+  }
+  .third-wrapper .third-area-inner .product-items .product-item-info .item-tit {
+    display: none;
+  }
+  .third-wrapper .third-area-inner .product-items .product-item-info .item-labels .label {
+    font-size: 1.1rem;
+  }
+  .third-wrapper .third-area-inner .product-items .product-item-info .item-name {
+    font-size: 1.6rem;
+  }
+  .third-wrapper .third-area-inner .product-items .product-item-info .item-price-box {
+    margin: 2px 0;
+  }
+  .third-wrapper .third-area-inner .product-items .product-item-info .item-price-box .discount-percent {
+    font-size: 1.5rem;
+  }
+  .third-wrapper .third-area-inner .product-items .product-item-info .item-price-box .special-price {
+    font-size: 1.5rem;
+  }
+  .third-wrapper .third-area-inner .product-items .product-item-info .item-price-box .basic-price {
+    font-size: 1.3rem;
+  }
+  .third-wrapper .third-area-inner .product-items .product-item-button-box div {
+    width: auto;
+  }
+  .third-wrapper .third-area-inner .product-items .product-item-button-box div span {
+    font-size: 2.4rem;
   }
 }
 

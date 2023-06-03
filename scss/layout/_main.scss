@@ -360,21 +360,8 @@
                 }
 
                 // 제품 가격
-                .item-price-box {
-                  margin: 2px 0;
-                  // 할인율
-                  .discount-percent {
-                    font-size: 1.5rem;
-                  }
-                  // 할인 적용된 가격
-                  .special-price {
-                    font-size: 1.5rem;
-                  }
-                  // 원래 가격
-                  .basic-price {
-                    font-size: 1.3rem;
-                  }
-                }
+                // base.scss
+
                 // 장바구니 버튼
                 .item-button-box {
                   padding: 6px 0 0;
@@ -488,19 +475,14 @@
             position: static;
             margin-bottom: 12px;
             .label {
-              span {
-                font-size: 1.4rem;
-
-              }
+              font-size: 1.4rem;
             }
           }
           // 제품명
           .item-name {
             height: auto;
             padding-top: 0;
-            span {
-              font-size: 1.8rem;
-            }
+            font-size: 1.8rem;
           }
 
           // 제품 가격
@@ -543,13 +525,82 @@
 
   @include mobile {
     padding-top: 40px;
+
+    // 세 번째 영역 배너
     .third-area-banner {
+      margin-bottom: 0;
       img.pc {
         display: none;
       }
       img.mo {
         display: block;
         height: auto;
+      }
+    }
+
+    // 세 번째 제품 영역
+    .third-area-inner {
+      padding: 0 24px;
+
+      .product-items {
+        .product-item {
+          display: grid;
+          grid-template-columns: repeat(7, 1fr);
+          padding: 0;
+
+          // 제품 사진
+          &-image {
+            max-width: 100%;
+            margin-bottom: 20px;
+            grid-column: 1 / 8;
+          }
+
+          // 제품 정보
+          &-info {
+            margin: 0;
+            grid-column: 1 / 7;
+
+
+            .item-tit {
+              display: none;
+            }
+            // 제품 라벨
+            .item-labels {
+              .label {
+                font-size: 1.1rem;
+              }
+            }
+            // 제품명
+            .item-name {
+              font-size: 1.6rem;
+            }
+            // 제품 가격
+            .item-price-box {
+              margin: 2px 0;
+              // 할인율
+              .discount-percent {
+                font-size: 1.5rem;
+              }
+              // 할인 적용된 가격
+              .special-price {
+                font-size: 1.5rem;
+              }
+              // 원래 가격
+              .basic-price {
+                font-size: 1.3rem;
+              }
+            }
+          }
+          // 제품 위시리스트, 장바구니
+          &-button-box {
+            div {
+              width: auto;
+              span {
+                font-size: 2.4rem;
+              }
+            }
+          }
+        }
       }
     }
   }
