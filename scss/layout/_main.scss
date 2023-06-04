@@ -593,6 +593,7 @@
           }
           // 제품 위시리스트, 장바구니
           &-button-box {
+            align-items: flex-end;
             div {
               width: auto;
               span {
@@ -618,10 +619,11 @@
     padding: 0 50px;
     display: flex;
     align-items: center;
+    position: relative;
 
     // 제품 영역
     .product-items {
-      display: block;
+      display: none;
       width: 55%;
       margin-right: 10px;
 
@@ -658,32 +660,44 @@
     // 제품명 탭 영역
     .product-tab-area {
       width: 45%;
-      margin-left: 10px;
+      margin-left: 55%;
       padding: 20px;
+
       li {
         width: 100%;
         border: 1px solid rgba(255, 255, 255, 0);
         border-radius: 3px;
-        a {
-          width: 100%;
-          padding: 20px;
-          display: flex;
-          align-items: center;
 
-          .popular-num {
-            font-size: 2rem;
-            font-weight: bold;
-            padding-right: 12px;
+        dl {
+          dt {
+            a {
+              width: 100%;
+              padding: 20px;
+              display: flex;
+              align-items: center;
+    
+              .popular-num {
+                font-size: 2rem;
+                font-weight: bold;
+                padding-right: 12px;
+              }
+    
+              .popular-name {
+                overflow: hidden;
+                display: inline-block;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                font-size: 1.7rem;
+              }
+    
+            }
           }
 
-          .popular-name {
-            overflow: hidden;
-            display: inline-block;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            font-size: 1.7rem;
+          dd {
+            position: absolute;
+            left: 0;
+            top: 0;
           }
-
         }
       }
       li.active {
@@ -693,6 +707,13 @@
         }
       }
     
+    }
+  }
+
+  @include mobile {
+    padding: 0;
+    .fourth-area-inner {
+      padding: 0 24px;
     }
   }
 }

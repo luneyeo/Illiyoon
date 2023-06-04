@@ -731,6 +731,9 @@ ul, ol, li {
   .third-wrapper .third-area-inner .product-items .product-item-info .item-price-box .basic-price {
     font-size: 1.3rem;
   }
+  .third-wrapper .third-area-inner .product-items .product-item-button-box {
+    align-items: flex-end;
+  }
   .third-wrapper .third-area-inner .product-items .product-item-button-box div {
     width: auto;
   }
@@ -749,9 +752,10 @@ ul, ol, li {
   padding: 0 50px;
   display: flex;
   align-items: center;
+  position: relative;
 }
 .fourth-wrapper .fourth-area-inner .product-items {
-  display: block;
+  display: none;
   width: 55%;
   margin-right: 10px;
 }
@@ -779,7 +783,7 @@ ul, ol, li {
 }
 .fourth-wrapper .fourth-area-inner .product-tab-area {
   width: 45%;
-  margin-left: 10px;
+  margin-left: 55%;
   padding: 20px;
 }
 .fourth-wrapper .fourth-area-inner .product-tab-area li {
@@ -787,29 +791,43 @@ ul, ol, li {
   border: 1px solid rgba(255, 255, 255, 0);
   border-radius: 3px;
 }
-.fourth-wrapper .fourth-area-inner .product-tab-area li a {
+.fourth-wrapper .fourth-area-inner .product-tab-area li dl dt a {
   width: 100%;
   padding: 20px;
   display: flex;
   align-items: center;
 }
-.fourth-wrapper .fourth-area-inner .product-tab-area li a .popular-num {
+.fourth-wrapper .fourth-area-inner .product-tab-area li dl dt a .popular-num {
   font-size: 2rem;
   font-weight: bold;
   padding-right: 12px;
 }
-.fourth-wrapper .fourth-area-inner .product-tab-area li a .popular-name {
+.fourth-wrapper .fourth-area-inner .product-tab-area li dl dt a .popular-name {
   overflow: hidden;
   display: inline-block;
   white-space: nowrap;
   text-overflow: ellipsis;
   font-size: 1.7rem;
 }
+.fourth-wrapper .fourth-area-inner .product-tab-area li dl dd {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
 .fourth-wrapper .fourth-area-inner .product-tab-area li.active {
   border: 1px solid #38a1f9;
 }
 .fourth-wrapper .fourth-area-inner .product-tab-area li.active .popular-num {
   color: #38a1f9;
+}
+@media (max-width: 767px) {
+  .fourth-wrapper {
+    padding: 0;
+    letter-spacing: -1px;
+  }
+  .fourth-wrapper .fourth-area-inner {
+    padding: 0 24px;
+  }
 }
 
 footer {
