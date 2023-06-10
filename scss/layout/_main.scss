@@ -621,49 +621,13 @@
     align-items: center;
     position: relative;
 
-    // 제품 영역
-    .product-items {
-      display: none;
-      width: 55%;
-      margin-right: 10px;
-
-      .product-item {
-        display: none;
-        gap: 20px;
-        align-items: center;
-
-        .product-item-info {
-          margin-top: 0;
-
-          .item-name {
-            height: auto;
-            font-size: 1.8rem;
-          }
-
-          .item-button-box {
-            justify-content: normal;
-            gap: 10px;
-
-            div {
-              width: auto;
-            }
-          }
-        }
-
-      }
-
-      .product-item.active {
-        display: flex;
-      }
-    }
-
     // 제품명 탭 영역
     .product-tab-area {
       width: 45%;
       margin-left: 55%;
       padding: 20px;
 
-      li {
+      > li {
         width: 100%;
         border: 1px solid rgba(255, 255, 255, 0);
         border-radius: 3px;
@@ -692,11 +656,44 @@
     
             }
           }
-
-          dd {
+          // 제품 영역 
+          dd.product-items {
+            width: 55%;
+            margin-right: 10px;
+            display: none;
             position: absolute;
             left: 0;
             top: 0;
+
+            .product-item {
+              display: flex;
+              gap: 20px;
+              align-items: center;
+
+              .product-item-info {
+                margin-top: 0;
+
+                .item-labels {
+                  width: auto;
+                }
+                .item-name {
+                  height: auto;
+                  font-size: 1.8rem;
+                }
+
+                .item-button-box {
+                  justify-content: normal;
+                  gap: 10px;
+
+                  div {
+                    width: auto;
+                  }
+                }
+              }
+            }
+          }
+          .product-items.active {
+            display: block;
           }
         }
       }
