@@ -25,3 +25,9 @@ $max-width : 1200px;
     @content;
   }
 }
+
+@mixin special {
+  @media (max-width : 1120px) {
+    @content;
+  }
+}

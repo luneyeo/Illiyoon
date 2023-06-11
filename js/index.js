@@ -1,17 +1,24 @@
 
 // 메인 배너 슬라이드
-new Swiper(".main-banner", {
-  pagination: {
-    el: ".swiper-pagination",
-    type: "fraction",
-  },
-  loop: true,
-  autoplay: true,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
+// new Swiper(".main-banner", {
+//   pagination: {
+//     el: ".swiper-pagination",
+//     type: "fraction",
+//   },
+//   loop: true,
+//   autoplay: true,
+//   navigation: {
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev",
+//   },
+// });
+
+
+const bannerMo = document.querySelector('.swiper-wrapper.mo')
+
+setInterval(function(){
+  bannerMo.style.marginLeft = ''
+}, 3000)
 
 
 // 첫 번째 영역 배너 슬라이드
@@ -21,6 +28,39 @@ new Swiper(".first-banner", {
   },
   loop: true,
 });
+
+
+
+// 두 번째 영역 / 메뉴 탭
+const bestMenuBtn = document.querySelector('.best-btn')
+const bestMenuCont = document.querySelector('.best-items')
+const newMenuBtn = document.querySelector('.new-btn')
+const newtMenuCont = document.querySelector('.new-items')
+
+// 인기템 메뉴
+function bestMenu(){
+  bestMenuCont.classList.add('active')
+  bestMenuBtn.parentNode.classList.add('active')
+
+  newtMenuCont.classList.remove('active')
+  newMenuBtn.parentNode.classList.remove('active')
+}
+
+// 신상 메뉴
+function newMenu(){
+  bestMenuCont.classList.remove('active')
+  bestMenuBtn.parentNode.classList.remove('active')
+  
+  newtMenuCont.classList.add('active')
+  newMenuBtn.parentNode.classList.add('active')
+}
+
+bestMenuBtn.addEventListener('click', bestMenu)
+newMenuBtn.addEventListener('click', newMenu)
+
+
+
+
 
 
 // 네 번째 영역 / 제품 탭
@@ -42,7 +82,6 @@ for(let i = 0; i < productTabs.length; i++) {
     document.querySelector(activeCon).style.display = 'flex';
   })
 }
-
 
 
 // Top Button

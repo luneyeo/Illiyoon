@@ -3,7 +3,7 @@ export default [
     img : '/img/new-product01.jpg',
     alt : '일리윤 프레쉬모이스춰 폼폼푸린 로션 350ml [다꾸 스티커 증정]',
     sold_out: '<div class="sold-out"><span>일시품절</span></div>',
-    label_bset : '',
+    label_bset : '<li class="label label-best"><span>BEST</span></li>',
     label_new : '',
     label_only : '',
     name : '일리윤 프레쉬모이스춰 폼폼푸린 로션 350ml [다꾸 스티커 증정]',
@@ -49,3 +49,8 @@ export default [
     review_star : '리뷰 24'
   }
 ]
+
+
+// <li class="label label-best"><span>BEST</span></li>
+// <li class="label label-new"><span>NEW</span></li>
+// <li class="label label-only"><span>공식몰 ONLY</span></li>

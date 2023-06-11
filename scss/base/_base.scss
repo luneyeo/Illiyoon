@@ -177,25 +177,6 @@
         }
       }
 
-      // 제품 가격
-      @include mobile {
-        .item-price-box {
-          margin: 2px 0;
-          // 할인율
-          .discount-percent {
-            font-size: 1.5rem;
-          }
-          // 할인 적용된 가격
-          .special-price {
-            font-size: 1.5rem;
-          }
-          // 원래 가격
-          .basic-price {
-            font-size: 1.3rem;
-          }
-        }
-      }
-
       // 제품 리뷰
       .item-review-box {
         font : {

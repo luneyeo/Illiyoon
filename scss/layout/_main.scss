@@ -184,6 +184,18 @@
 
       .product-item {
         padding: 10px;
+
+        &-info {
+          margin-top: 14px;
+          .item-labels {
+            top: -2px;
+          }
+
+          .item-name {
+            padding-top: 24px;
+            height: 72px;
+          }
+        }
       }
     }
   }
@@ -274,8 +286,10 @@
         // 상품 더보기 버튼
         // base.scss
         .product-more {
+          width: 100%;
+          padding: 0 30px;
           &-btn {
-            width: 90%;
+            width: 100%;
           }
         }
       }
@@ -333,7 +347,7 @@
           }
           // 제품
           .product-items {
-            padding: 0 24px;
+            padding: 20px 24px;
             margin-top: 0px;
             grid-template-columns: repeat(1, 1fr);
             .product-item {
@@ -349,30 +363,53 @@
               }
               // 제품 정보
               &-info {
+                display: grid;
+                justify-content: space-between;
                 flex-grow: 1;
                 margin-top: 0;
                 font-size: 1.4rem;
 
+                // 제품 라벨
+                .item-labels {
+                  top: -13px;
+                  .labe {
+                    font-size: 1rem;
+                  }
+                }
+
                 // 제품명
                 .item-name {
                   height: auto;
-                  padding-top: 26px;
+                  padding-top: 14px;
+                  grid-column: 1/2;
                 }
 
                 // 제품 가격
                 // base.scss
+                .item-price-box {
+                  grid-column: 1/2;
+                }
+
+                // 제품 리뷰
+                .item-review-box {
+                  grid-column: 1/2;
+                }
 
                 // 장바구니 버튼
                 .item-button-box {
-                  padding: 6px 0 0;
-                  justify-content: flex-start;
-                  gap: 5px;
+                  grid-column: 2 / 3;
+                  grid-row: 1 / 4;
+                  flex-direction: column;
+                  padding: 0;
 
                   div {
                     width: auto;
                     span {
                       font-size: 2.2rem;
                     }
+                  }
+                  .product-wishlist {
+                    margin-bottom: 10px;
                   }
                 }
               }
@@ -576,7 +613,6 @@
             }
             // 제품 가격
             .item-price-box {
-              margin: 2px 0;
               // 할인율
               .discount-percent {
                 font-size: 1.5rem;
@@ -623,9 +659,9 @@
 
     // 제품명 탭 영역
     .product-tab-area {
-      width: 45%;
-      margin-left: 55%;
-      padding: 20px;
+      width: 46%;
+      margin-left: 54%;
+      padding: 20px 0;
 
       > li {
         width: 100%;
@@ -636,7 +672,7 @@
           dt {
             a {
               width: 100%;
-              padding: 20px;
+              padding: 20px 30px;
               display: flex;
               align-items: center;
     
@@ -658,32 +694,42 @@
           }
           // 제품 영역 
           dd.product-items {
-            width: 55%;
-            margin-right: 10px;
-            display: none;
+            width: 45%;
             position: absolute;
-            left: 0;
-            top: 0;
+            left: 6%;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: all .1s linear;
+            display: flex;
+            opacity: 0;
 
             .product-item {
               display: flex;
-              gap: 20px;
               align-items: center;
+              flex-wrap: wrap;
+              justify-content: center;
+              padding: 0;
 
-              .product-item-info {
-                margin-top: 0;
+              &-image {
+                width: 250px;
+              }
+              &-info {
+                width: 250px;
+                margin : 10px 20px 0;
 
+                span { letter-spacing: -1px;}
                 .item-labels {
                   width: auto;
                 }
                 .item-name {
                   height: auto;
-                  font-size: 1.8rem;
+                  font-size: 1.7rem;
                 }
 
                 .item-button-box {
                   justify-content: normal;
                   gap: 10px;
+                  padding: 4px 0;
 
                   div {
                     width: auto;
@@ -692,7 +738,6 @@
               }
             }
           }
-
         }
       }
       li.active {
@@ -701,7 +746,7 @@
           color: $color-blue;
         }
         .product-items {
-          display: block;
+          opacity: 1;
         }
       }
     
@@ -711,9 +756,105 @@
   @include mobile {
     padding: 0;
     .fourth-area-inner {
-      padding: 0 24px;
+      padding: 0 24px 70px;
+
+      .product-tab-area {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
+        > li {
+          border: none;
+          padding: 6px 0;
+          border-bottom: 1px solid $color-light-grey;
+          border-radius: 0;
+          dl {
+            dt {
+              a {
+                padding: 10px 0;
+                .popular-num {
+                  font-size: 1.5rem;
+                  color: $color-blue;
+                }
+
+                .popular-name {
+                  font-size: 1.5rem;
+                }
+              }
+            }
+
+            dd.product-items {
+              display: flex;
+              position: inherit;
+              width: 100%;
+              transform: translateY(0%);
+              transition: all .3s linear;
+              height: 0px;
+              overflow: hidden;
+              opacity: 1;
+
+              .product-item {
+                width: 100%;
+                &-image {
+                  width: 70px;
+                }
+
+                &-info {
+                  flex-grow: 1;
+                  margin: 0 0 0 10px;
+                  display: grid;
+                  justify-content: space-between;
+
+                  .item-labels {
+                    display: none;
+                  }
+
+                  .item-name {
+                    padding: 0;
+                    grid-column: 1 / 2;
+                    font-size: 1.4rem;
+                  }
+
+                  .item-price-box {
+                    grid-column: 1 / 2;
+                    span {
+                      font-size: 1.5rem;
+                    }
+                  }
+
+                  .item-button-box {
+                    grid-column: 2 / 3;
+                    grid-row: 1 / 3;
+                    width: 40px;
+                    padding: 0;
+
+                    flex-direction: column;
+                    padding: 0%;
+
+                    div {
+                      span {
+                        font-size: 23px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        > li.active {
+          border: none;
+          border-bottom: 1px solid $color-light-grey;
+          dd.product-items {
+            height: 75px;
+          }
+
+        }
+
+      }
     }
   }
+
+
 }
-
-
