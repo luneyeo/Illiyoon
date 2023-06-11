@@ -36,8 +36,7 @@ for(let i = 0; i < productTabs.length; i++) {
       productTabs[j].classList.remove('active')
       productTabItems[j].classList.remove('active')
     }
-    this.parentNode.parentNode.parentNode.classList.add('active')
-    this.parentNode.nextElementSibling.classList.add('active')
+    productTabs[i].classList.add('active')
 
     activeCon = this.getAttribute('href');
     document.querySelector(activeCon).style.display = 'flex';

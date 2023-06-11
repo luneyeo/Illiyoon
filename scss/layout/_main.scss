@@ -692,15 +692,16 @@
               }
             }
           }
-          .product-items.active {
-            display: block;
-          }
+
         }
       }
       li.active {
         border: 1px solid $color-blue;
         .popular-num {
           color: $color-blue;
+        }
+        .product-items {
+          display: block;
         }
       }
     
