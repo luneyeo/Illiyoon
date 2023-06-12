@@ -1,7 +1,7 @@
 // 반응형 화면 크기
 $mobile: 767px;
 $tablet: 1200px;
-$desktop: 1024px;
+$desktop: 1201px;
 $max-width : 1200px;
 
 // 브라우저 크기가 767px 이하일때
@@ -12,14 +12,14 @@ $max-width : 1200px;
   }
 }
 
-// 브라우저 크기가 768이상, 1023px 이하일때
+// 브라우저 크기가 768이상, 1200px 이하일때
 @mixin tablet{
   @media (min-width: #{$mobile + 1px}) and (max-width: $tablet){
     @content;
   }
 }
 
-// 브라우저 크기가 1024px 이상일때
+// 브라우저 크기가 1200px 이상일때
 @mixin desktop{
   @media (min-width: $desktop){
     @content;

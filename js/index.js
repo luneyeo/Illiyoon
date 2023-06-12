@@ -1,24 +1,31 @@
 
 // 메인 배너 슬라이드
-// new Swiper(".main-banner", {
-//   pagination: {
-//     el: ".swiper-pagination",
-//     type: "fraction",
-//   },
-//   loop: true,
-//   autoplay: true,
-//   navigation: {
-//     nextEl: ".swiper-button-next",
-//     prevEl: ".swiper-button-prev",
-//   },
-// });
+new Swiper(".main-banner-pc", {
+  pagination: {
+    el: ".swiper-pagination",
+    type: "fraction",
+  },
+  loop: true,
+  autoplay: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
 
 
-const bannerMo = document.querySelector('.swiper-wrapper.mo')
-
-setInterval(function(){
-  bannerMo.style.marginLeft = ''
-}, 3000)
+new Swiper(".main-banner-mo", {
+  pagination: {
+    el: ".swiper-pagination",
+    type: "fraction",
+  },
+  loop: true,
+  autoplay: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
 
 
 // 첫 번째 영역 배너 슬라이드

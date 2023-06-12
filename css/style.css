@@ -948,6 +948,17 @@ footer .footer-inner {
   color: #fff;
   font-size: 1.4rem;
 }
+@media (min-width: 768px) and (max-width: 1200px) {
+  footer .footer-inner {
+    padding: 0 24px;
+  }
+}
+@media (max-width: 767px) {
+  footer .footer-inner {
+    padding: 0 24px;
+    letter-spacing: -1px;
+  }
+}
 footer .footer-inner .footer-top {
   width: 100%;
   padding: 20px 0;
@@ -972,6 +983,13 @@ footer .footer-inner .footer-bottom {
   width: 100%;
   padding: 40px 0;
 }
+@media (max-width: 767px) {
+  footer .footer-inner .footer-bottom {
+    width: 96%;
+    padding: 26px 0;
+    letter-spacing: -1px;
+  }
+}
 footer .footer-inner .footer-bottom .footer-info-items {
   font-size: 1.3rem;
   font-weight: 500;
@@ -980,13 +998,31 @@ footer .footer-inner .footer-bottom .footer-info-items {
 footer .footer-inner .footer-bottom .footer-info-items .footer-info-item {
   margin-bottom: 8px;
 }
+@media (max-width: 767px) {
+  footer .footer-inner .footer-bottom .footer-info-items .footer-info-item {
+    line-height: 2.3rem;
+    letter-spacing: -1px;
+  }
+}
 footer .footer-inner .footer-bottom .footer-info-items .footer-info-item span {
   margin-right: 24px;
+}
+@media (max-width: 767px) {
+  footer .footer-inner .footer-bottom .footer-info-items .footer-info-item span {
+    margin-right: 14px;
+    letter-spacing: -1px;
+  }
 }
 footer .footer-inner .footer-bottom .footer-info-items .footer-info-item .info-link {
   color: #fff;
   font-size: 1.2rem;
   margin-left: -20px;
+}
+@media (max-width: 767px) {
+  footer .footer-inner .footer-bottom .footer-info-items .footer-info-item .info-link {
+    margin-left: 0px;
+    letter-spacing: -1px;
+  }
 }
 footer .footer-inner .footer-bottom .footer-info-items .footer-info-item .info-link:hover {
   text-decoration: underline;
