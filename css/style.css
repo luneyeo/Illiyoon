@@ -496,14 +496,14 @@ dd {
   margin-right: 20px;
 }
 .second-wrapper .second-area-inner .product-section-item.best-items .section-bg {
-  background-image: url("/img/best-items-pc.jpg");
+  background-image: url("../img/best-items-pc.jpg");
   background-size: 100%;
 }
 .second-wrapper .second-area-inner .product-section-item.new-items {
   margin-left: 20px;
 }
 .second-wrapper .second-area-inner .product-section-item.new-items .section-bg {
-  background-image: url("/img/new-items-pc.jpg");
+  background-image: url("../img/new-items-pc.jpg");
   background-size: 100%;
 }
 @media (max-width: 767px) {
@@ -609,7 +609,7 @@ dd {
     display: none;
   }
   .second-wrapper .second-area-inner .product-section-item.best-items .section-bg {
-    background-image: url("/img/best-items-mo.jpg");
+    background-image: url("../img/best-items-mo.jpg");
     background-size: 100%;
   }
   .second-wrapper .second-area-inner .product-section-item.best-items.active {
@@ -620,7 +620,7 @@ dd {
     display: none;
   }
   .second-wrapper .second-area-inner .product-section-item.new-items .section-bg {
-    background-image: url("/img/new-items-mo.jpg");
+    background-image: url("../img/new-items-mo.jpg");
     background-size: 100%;
   }
   .second-wrapper .second-area-inner .product-section-item.new-items.active {
