@@ -56,7 +56,7 @@ toggleMenuOpenbtn.addEventListener('click', function(){
 })
 
 toggleMenuClosebtn.addEventListener('click', function(){
-  wrap.style.transform = 'translateX(0vw)'
+  wrap.style.transform = 'inherit'
   document.documentElement.classList.remove('fixed')
 })
 
