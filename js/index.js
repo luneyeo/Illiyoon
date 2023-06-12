@@ -13,7 +13,7 @@ new Swiper(".main-banner-pc", {
   },
 });
 
-
+// 메인 배너 슬라이드 모바일
 new Swiper(".main-banner-mo", {
   pagination: {
     el: ".swiper-pagination",
@@ -35,6 +35,33 @@ new Swiper(".first-banner", {
   },
   loop: true,
 });
+
+
+
+
+// 모바일 헤더 토글 메뉴
+
+const wrap = document.querySelector('#wrap')
+const toggleMenuOpenbtn = document.querySelector('.toggle-menu-open-btn')
+const toggleMenuClosebtn = document.querySelector('.toggle-menu-close-btn')
+
+
+function addFixed(){
+  document.documentElement.classList.add('fixed')
+}
+
+toggleMenuOpenbtn.addEventListener('click', function(){
+  wrap.style.transform = 'translateX(100vw)'
+  setTimeout(addFixed, 300)
+})
+
+toggleMenuClosebtn.addEventListener('click', function(){
+  wrap.style.transform = 'translateX(0vw)'
+  document.documentElement.classList.remove('fixed')
+})
+
+
+
 
 
 
